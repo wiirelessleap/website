@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Welcome to the Wiireless website homepage! our website has been coded in HTML, CSS and Javascript
+	by Sascha, our IT director. We have commented the website code so feel free to 
+	take a look around! We hope you enjoy and thank you for visiting our website :D -->
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Particles js library created by Vincent Garreau & Website created by S Bharath" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/mainstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+
+
+	input[type=text], textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+	}
+
+	input[type=submit] {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+
+	.container {
+	  width: 80%;
+	  border-radius: 5px;
+	  background-color: #666666;
+	  padding: 20px;
+	  padding-left: 20px;
+	}
+	</style> 
+  
+  
+  
+  
+</head>
+
+<?php
+	$name = $_POST['name'];
+	$visitor_email = $_POST['email'];
+	$message = $_POST['subject'];
+	
+	$email_subject = "Wiireless enquiry";
+	$email_body = "From:  $name at $visitor_email \n Message:  $message \n";
+	$to = 'wiirelessleap@outlook.com';
+
+	mail($to,$email_subject, $email_body);
+?>
+
+
+<body>
+	<!-- navbar menu at top of page -->
+	<div class="topnav">
+	  <a href="index.html">Home</a>
+	  <a href="about.html">About Us</a>
+	  <a href="product.html">Products</a>
+	  <a href="behind.html">Behind the Scenes</a>
+	  <a href="contact.html">Contact</a>
+	</div>
+
+	<!-- particles.js container -->
+	<div id="particles-js"> 
+			<div class="center scene_element scene_element--fadeinleft">
+				  <h1>
+					 Contact
+				  </h1>
+			</div>
+	</div>
+
+
+	<!-- main content below particles -->
+	<div class="content">
+	  <h2>Contact</h2>
+		  </br>
+		  <p>Any questions, queries or feedback?<p>
+		  <p>We'd love to hear from you! Please reach out to us using the form below or any of our social media.</p> 
+		  </br> </br> </br>
+		  
+		  <div class="container">
+			  <form method="post">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" placeholder="Name">
+
+				<label for="email">Email</label>
+				<input type="text" id="email" name="email" placeholder="example@mail.com"> </br>
+				
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
+
+				<input type="submit" value="Submit">
+			  </form>
+		   </div>
+
+	  </br> </br> </br>
+	
+	
+	  </div>
+
+
+	<!-- footer below the content -->
+	<div class="footer">
+	  </br> </br> </br>
+	  <p>Find us on social media!</p> </br>
+	  <a href="https://twitter.com/@wiireless_" class="fa fa-twitter"></a>
+	  <a href="https://www.instagram.com/wiireless_/" class="fa fa-instagram"></a>
+	</div>
+
+
+	<!-- scripts being used to power the webpage-->
+	<script src="particles.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
